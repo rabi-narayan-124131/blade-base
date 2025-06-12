@@ -8,38 +8,112 @@
 
 <p align="center">
   <a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-
-  <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-
-  <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-
+  <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework?color=red&logo=laravel" alt="Latest Stable Version"></a>
+  <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework?color=blue" alt="License"></a>
 </p>
 
 ---
 
 ## 📌 **About BladeBase**
 
-**BladeBase Starter Kit** is a minimalistic Laravel boilerplate providing a solid foundation with **Blade templates, Tailwind CSS, Vite, Pest for testing, and Laravel Debugbar** for debugging.
+> **BladeBase Starter Kit** is a minimalistic Laravel boilerplate providing a solid foundation with  
+> **Blade templates, Tailwind CSS, Vite, Pest for testing, and Laravel Debugbar** for debugging.
+
+---
 
 ### 🚀 **Why BladeBase?**
-- **Quick Start:** No initial database setup needed; view `welcome.blade.php` instantly.
-- **Modern Styling:** Tailwind CSS integrated for responsive designs.
-- **Fast Build System:** Uses Vite for asset compilation.
-- **Optimized Debugging:** Laravel Debugbar pre-configured.
-- **Testing-Ready:** Ships with Pest PHP for unit and feature testing.
+
+- 🎉 **Quick Start:** No initial database setup needed; view `welcome.blade.php` instantly.
+- 🎨 **Modern Styling:** Tailwind CSS integrated for responsive designs.
+- ⚡ **Fast Build System:** Uses Vite for asset compilation.
+- 🐞 **Optimized Debugging:** Laravel Debugbar pre-configured.
+- 🧪 **Testing-Ready:** Ships with Pest PHP for unit and feature testing.
+
+---
+
+## ⚡️ **Quick Start with Laravel Installer**
+
+<details>
+<summary><b>🚀 Create a new project using the Laravel installer</b></summary>
+
+```bash
+laravel new project-name --using=rabi-narayan-124131/blade-base
+cd project-name
+```
+
+</details>
+
+<details>
+<summary><b>📝 Next Steps</b></summary>
+
+- 1️⃣ **Run Application Without Database**  
+    ```bash
+    php artisan serve
+    ```
+    _or_
+    ```bash
+    composer run dev
+    ```
+    <br>🔗 **View BladeBase UI instantly at** [http://127.0.0.1:8000](http://127.0.0.1:8000)
+
+- 2️⃣ **Configure Database & Apply Migrations**  
+    ```bash
+    php artisan migrate
+    php artisan setup:db
+    ```
+    <br>💾 **Automatically switches session, queue, and cache to database storage.**
+
+- 3️⃣ **Install Frontend Dependencies & Build Assets**  
+    ```bash
+    npm install
+    npm run build
+    ```
+    <br>🎨 **Tailwind CSS, Vite, and dependencies are installed.**
+
+- 4️⃣ **Start Development Mode**  
+    ```bash
+    composer run dev
+    ```
+    <br>⚡ **Runs Laravel, queues, and Vite simultaneously.**
+
+</details>
+
+---
+
+## 📦 **Download as ZIP**
+
+<details>
+<summary><b>⬇️ Download & Setup (No Git Required)</b></summary>
+
+1️⃣ Click the green <b>Code</b> button on GitHub, then select <b>Download ZIP</b>.  
+2️⃣ Extract the ZIP file to your desired location.  
+3️⃣ Open a terminal in the extracted folder.
+
+> ⚠️ **Important:**  
+> If you downloaded the project as a ZIP file, <b>do not run the "Clone & Install Dependencies" step below</b>.  
+> Start directly from the <code>composer install</code> command inside your extracted folder, then continue with the rest of the steps.
+
+</details>
 
 ---
 
 ## 📖 **Installation Guide**
 
-### 1️⃣ Clone & Install Dependencies
+<details open>
+<summary><b>1️⃣ Clone & Install Dependencies</b></summary>
+
 ```bash
 git clone https://github.com/rabi-narayan-124131/blade-base.git
 cd blade-base
 composer install
 ```
+> **Note:** If you downloaded as ZIP, skip `git clone` and `cd blade-base`. Just run `composer install` in your extracted folder.
 
-### 2️⃣ Setup Environment File
+</details>
+
+<details>
+<summary><b>2️⃣ Setup Environment File</b></summary>
+
 Copy the `.env.example` file and rename it to `.env`:
 
 On Linux/macOS:
@@ -55,8 +129,11 @@ Then generate the application key:
 ```bash
 php artisan key:generate
 ```
+</details>
 
-### 3️⃣ Run Application Without Database
+<details>
+<summary><b>3️⃣ Run Application Without Database</b></summary>
+
 ```bash
 php artisan serve
 ```
@@ -64,27 +141,41 @@ _or_
 ```bash
 composer run dev
 ```
-> **View BladeBase UI instantly at** `http://127.0.0.1:8000`
+> 🔗 **View BladeBase UI instantly at** [http://127.0.0.1:8000](http://127.0.0.1:8000)
 
-### 4️⃣ Configure Database & Apply Migrations
+</details>
+
+<details>
+<summary><b>4️⃣ Configure Database & Apply Migrations</b></summary>
+
 ```bash
 php artisan migrate
 php artisan setup:db
 ```
-> **Automatically switches session, queue, and cache to database storage.**
+> 💾 **Automatically switches session, queue, and cache to database storage.**
 
-### 5️⃣ Install Frontend Dependencies & Build Assets
+</details>
+
+<details>
+<summary><b>5️⃣ Install Frontend Dependencies & Build Assets</b></summary>
+
 ```bash
 npm install
 npm run build
 ```
-> **Tailwind CSS, Vite, and dependencies are installed.**
+> 🎨 **Tailwind CSS, Vite, and dependencies are installed.**
 
-### 6️⃣ Start Development Mode
+</details>
+
+<details>
+<summary><b>6️⃣ Start Development Mode</b></summary>
+
 ```bash
 composer run dev
 ```
-> **Runs Laravel, queues, and Vite simultaneously.**
+> ⚡ **Runs Laravel, queues, and Vite simultaneously.**
+
+</details>
 
 ---
 
