@@ -11,6 +11,8 @@
 
   <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
 
+  <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
+
 </p>
 
 ---
@@ -37,7 +39,24 @@ cd blade-base
 composer install
 ```
 
-### 2️⃣ Run Application Without Database
+### 2️⃣ Setup Environment File
+Copy the `.env.example` file and rename it to `.env`:
+
+On Linux/macOS:
+```bash
+cp .env.example .env
+```
+On Windows:
+```bash
+copy .env.example .env
+```
+
+Then generate the application key:
+```bash
+php artisan key:generate
+```
+
+### 3️⃣ Run Application Without Database
 ```bash
 php artisan serve
 ```
@@ -47,21 +66,21 @@ composer run dev
 ```
 > **View BladeBase UI instantly at** `http://127.0.0.1:8000`
 
-### 3️⃣ Configure Database & Apply Migrations
+### 4️⃣ Configure Database & Apply Migrations
 ```bash
 php artisan migrate
 php artisan setup:db
 ```
 > **Automatically switches session, queue, and cache to database storage.**
 
-### 4️⃣ Install Frontend Dependencies & Build Assets
+### 5️⃣ Install Frontend Dependencies & Build Assets
 ```bash
 npm install
 npm run build
 ```
 > **Tailwind CSS, Vite, and dependencies are installed.**
 
-### 5️⃣ Start Development Mode
+### 6️⃣ Start Development Mode
 ```bash
 composer run dev
 ```
