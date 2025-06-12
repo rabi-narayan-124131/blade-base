@@ -32,8 +32,8 @@
 
 ### 1️⃣ Clone & Install Dependencies
 ```bash
-git clone https://github.com/Rabi-Narayan-124131/bladebase.git
-cd bladebase
+git clone https://github.com/rabi-narayan-124131/blade-base.git
+cd blade-base
 composer install
 ```
 
