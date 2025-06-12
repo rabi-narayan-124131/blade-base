@@ -1,13 +1,24 @@
 {
     "$schema": "https://getcomposer.org/schema.json",
-    "name": "Rabi-Narayan-124131/BladeBase",
+    "name": "rabi-narayan-124131/blade-base",
     "type": "project",
-    "description": "The skeleton application for the Laravel framework.",
+    "description": "A minimal, modern Laravel starter kit featuring Blade templates, Tailwind CSS, Vite, Pest for testing, and Laravel Debugbar. Instantly preview the UI with no initial database setup. Includes fast asset builds, pre-configured debugging, and a clean, developer-friendly structure—perfect for rapid Laravel prototyping and lightweight projects.",
     "keywords": [
         "laravel",
+        "starter kit",
+        "blade starter kit",
+        "blade-base starter kit",
         "framework"
     ],
     "license": "MIT",
+    "authors": [
+        {
+            "name": "Rabi Narayan",
+            "email": "coolrabi9583@gmail.com",
+            "homepage": "https://github.com/rabi-narayan-124131",
+            "role": "Developer"
+        }
+    ],
     "require": {
         "php": "^8.2",
         "laravel/framework": "^12.0",
