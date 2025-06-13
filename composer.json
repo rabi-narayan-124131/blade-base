@@ -58,13 +58,16 @@
         ],
         "post-install-cmd": [
             "@php -r \"file_exists('.env') || copy('.env.example', '.env');\"",
-            "@php artisan key:generate --ansi"
+            "@php artisan key:generate --ansi",
+            "@php artisan fix:composer",
+            "composer dump-autoload"
         ],
         "post-create-project-cmd": [
             "@php -r \"file_exists('.env') || copy('.env.example', '.env');\"",
             "@php artisan key:generate --ansi",
             "@php artisan fix:composer",
-            "composer update"
+            "composer update",
+            "composer dump-autoload"
         ],
         "dev": [
             "Composer\\Config::disableProcessTimeout",
