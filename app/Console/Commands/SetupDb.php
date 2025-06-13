@@ -25,7 +25,7 @@ class SetupDb extends Command
             $updates = [
                 'SESSION_DRIVER=file' => 'SESSION_DRIVER=database',
                 'QUEUE_CONNECTION=sync' => 'QUEUE_CONNECTION=database',
-                'CACHE_DRIVER=file' => 'CACHE_STORE=database'
+                'CACHE_STORE=file' => 'CACHE_STORE=database'
             ];
 
             foreach ($updates as $search => $replace) {

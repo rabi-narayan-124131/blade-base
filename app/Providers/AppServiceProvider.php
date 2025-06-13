@@ -2,10 +2,11 @@
 
 namespace App\Providers;
 
-use Illuminate\Support\ServiceProvider;
+use App\Console\Commands\FixComposer;
 use App\Console\Commands\SetupDb;
 use Illuminate\Console\Application;
 use Barryvdh\Debugbar\Facades\Debugbar;
+use Illuminate\Support\ServiceProvider;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -14,6 +15,9 @@ class AppServiceProvider extends ServiceProvider
      */
     public function register(): void
     {
+        // Register the FixComposer command
+        $this->app->singleton(FixComposer::class);
+
         // Register the SetupDb command
         $this->app->singleton(SetupDb::class);
     }
@@ -26,6 +30,7 @@ class AppServiceProvider extends ServiceProvider
         if ($this->app->runningInConsole()) {
             $this->commands([
                 SetupDb::class,
+                FixComposer::class,
             ]);
         }
 

@@ -11,14 +11,12 @@
         "framework"
     ],
     "license": "MIT",
-    "authors": [
-        {
-            "name": "Rabi Narayan",
-            "email": "coolrabi9583@gmail.com",
-            "homepage": "https://github.com/rabi-narayan-124131",
-            "role": "Developer"
-        }
-    ],
+    "authors": [{
+        "name": "Rabi Narayan",
+        "email": "coolrabi9583@gmail.com",
+        "homepage": "https://github.com/rabi-narayan-124131",
+        "role": "Developer"
+    }],
     "require": {
         "php": "^8.2",
         "laravel/framework": "^12.0",
@@ -58,9 +56,15 @@
         "post-root-package-install": [
             "@php -r \"file_exists('.env') || copy('.env.example', '.env');\""
         ],
+        "post-install-cmd": [
+            "@php -r \"file_exists('.env') || copy('.env.example', '.env');\"",
+            "@php artisan key:generate --ansi"
+        ],
         "post-create-project-cmd": [
+            "@php -r \"file_exists('.env') || copy('.env.example', '.env');\"",
             "@php artisan key:generate --ansi",
-            "@php -r \"file_exists('.env') || copy('.env.example', '.env');\""
+            "@php artisan fix:composer",
+            "composer update"
         ],
         "dev": [
             "Composer\\Config::disableProcessTimeout",
