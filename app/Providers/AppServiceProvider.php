@@ -29,8 +29,8 @@ class AppServiceProvider extends ServiceProvider
     {
         if ($this->app->runningInConsole()) {
             $this->commands([
-                SetupDb::class,
                 FixComposer::class,
+                SetupDb::class,
             ]);
         }
 
